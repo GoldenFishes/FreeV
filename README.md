@@ -2,7 +2,67 @@
 
 **​You can apply the FreeV method by replacing the "libs/uvit_multi_post_ln.py" file in UniDiffuser. You can also read the uvit_multi_post_ln.py code directly to easily understand our improved method (our method is as simple as FreeU and involves only a few lines of code to implement).**
 
+### Code
 
+```python
+@torch.no_grad()
+def Fourier_filter(x, threshold, scale):
+    # FFT
+    x_freq = torch.fft.fftn(x, dim=-2)
+    x_freq = torch.fft.fftshift(x_freq, dim=-2)
+
+    B, L, C = x_freq.shape
+    mask = torch.ones((B, L, C)).cuda()
+
+    center = L // 2
+    mask[..., center - threshold:center + threshold, ...] = scale
+    x_freq = x_freq * mask
+
+    # IFFT
+    x_freq = torch.fft.ifftshift(x_freq, dim=-2)
+    x_filtered = torch.fft.ifftn(x_freq, dim=-2).real
+
+    return x_filtered
+
+class Block_in_UViT(nn.Module):
+    def __init__(
+        self, 
+        Free_b=1, 
+        Free_s=1, 
+        Free_f=1,
+        *args,
+        **kwargs
+    ):
+        super().__init__(*args, **kwargs)
+        self.free_b = Free_b
+        self.free_s = Free_s
+        self.free_f = Free_f
+
+     def forward(self, x, skip=None):
+        if self.skip_linear is not None:
+	    # ----------------- FreeV code ---------------------
+            x[:, :, 768:] = x[:, :, 768:] * self.free_b
+            skip = Fourier_filter(skip, threshold=1, scale=self.free_s)
+	    # --------------------------------------------------
+            
+            x = self.skip_linear(torch.cat([x, skip], dim=-1))
+            x = self.norm1(x)
+			
+            # ----------------- FreeV code ---------------------
+            x[:, :, :768] = x[:, :, :768] * self.free_f
+	    # --------------------------------------------------
+            
+        x = x + self.drop_path(self.attn(x))
+        x = self.norm2(x)
+
+        x = x + self.drop_path(self.mlp(x))
+        x = self.norm3(x)
+
+        return x
+
+```
+
+### Visulization
 ![](assets/1.jpg)
 
 ![](assets/2.jpg)
