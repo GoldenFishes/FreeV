@@ -34,7 +34,7 @@ k'_{l,i} = \begin{cases}
   k_{l,i}, & \text{otherwise }
 \end{cases}
 ```
-​	Where $$k_{l,i}$$ represents the $i$-th channel of the fused feature map $$k_{l}$$. The paper enhances the first half of the channels in the fused feature map, hoping that this bold maneuver will circumvent unpredictability in the linear layer's feature mapping. The aim is to strike a delicate balance between enhancing denoising capabilities and preserving texture details.
+​	Where $k_{l,i}$ represents the $i$-th channel of the fused feature map $k_{l}$. The paper enhances the first half of the channels in the fused feature map, hoping that this bold maneuver will circumvent unpredictability in the linear layer's feature mapping. The aim is to strike a delicate balance between enhancing denoising capabilities and preserving texture details.
 
 ​	The direct incorporation of features from shallow Transformer Blocks into deep-level skip connections introduces a significant amount of high-frequency information, leading us to make a choice similar to the approach in FreeU. The mathematical operation for applying the modulation factor \(s\) to skip features is executed as follows: 
 
