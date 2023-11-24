@@ -26,7 +26,7 @@ x'_{l,i} = \begin{cases}
 \end{cases}
 ```
 
-​	Where $x_{l,i}$ represents the $i$-th channel of the backbone feature map $x_{l}$. Here, $C$ denotes the total number of channels in $x_{l}$, specifically 1536 in the U-ViT framework employed in this paper. This partial channel implementation strategy not only enhances the denoising capabilities of the backbone but also avoids adverse consequences of uncontrolled global scaling. However, limitations persist in U-ViT's feature fusion process. As mentioned earlier, its fixed-parameter linear mapping restricts any alterations before the linear fusion layer and significantly limits the interpretability analysis of the model. Therefore, solely adjusting the scaling of skip features is insufficient to achieve our objective. Consequently, we perform similar adjustments on the fused features:
+​Where $x_{l,i}$ represents the $i$-th channel of the backbone feature map $x_{l}$. Here, $C$ denotes the total number of channels in $x_{l}$, specifically 1536 in the U-ViT framework employed in this paper. This partial channel implementation strategy not only enhances the denoising capabilities of the backbone but also avoids adverse consequences of uncontrolled global scaling. However, limitations persist in U-ViT's feature fusion process. As mentioned earlier, its fixed-parameter linear mapping restricts any alterations before the linear fusion layer and significantly limits the interpretability analysis of the model. Therefore, solely adjusting the scaling of skip features is insufficient to achieve our objective. Consequently, we perform similar adjustments on the fused features:
 
 ```math
 k'_{l,i} = \begin{cases}
@@ -34,9 +34,9 @@ k'_{l,i} = \begin{cases}
   k_{l,i}, & \text{otherwise }
 \end{cases}
 ```
-​	Where $k_{l,i}$ represents the $i$-th channel of the fused feature map $k_{l}$. The paper enhances the first half of the channels in the fused feature map, hoping that this bold maneuver will circumvent unpredictability in the linear layer's feature mapping. The aim is to strike a delicate balance between enhancing denoising capabilities and preserving texture details.
+​Where $k_{l,i}$ represents the $i$-th channel of the fused feature map $k_{l}$. The paper enhances the first half of the channels in the fused feature map, hoping that this bold maneuver will circumvent unpredictability in the linear layer's feature mapping. The aim is to strike a delicate balance between enhancing denoising capabilities and preserving texture details.
 
-​	The direct incorporation of features from shallow Transformer Blocks into deep-level skip connections introduces a significant amount of high-frequency information, leading us to make a choice similar to the approach in FreeU. The mathematical operation for applying the modulation factor \(s\) to skip features is executed as follows: 
+​The direct incorporation of features from shallow Transformer Blocks into deep-level skip connections introduces a significant amount of high-frequency information, leading us to make a choice similar to the approach in FreeU. The mathematical operation for applying the modulation factor \(s\) to skip features is executed as follows: 
 
 ```math
 F(h_{l,i}) = \text{FFT}(h_{l,i}) \quad
@@ -50,7 +50,7 @@ F'(h_{l,i}) = F(h_{l,i}) \odot \alpha_{l,i} \quad
 h'(h_{l,i}) = \text{IFFT}(F'(h_{l,i})) \quad
 ```
 
-​	Where $\text{FFT}(·)$ and $\text{IFFT}(·)$ denote the Fourier Transform and Inverse Fourier Transform, respectively. $\odot$ represents element-wise multiplication. $\alpha_{l,i}$ is the mask applied to the Fourier domain to achieve suppression of Fourier low-frequency components, implemented as a function that uses the scaling factor $s_{l}$ for suppression.
+​Where $\text{FFT}(·)$ and $\text{IFFT}(·)$ denote the Fourier Transform and Inverse Fourier Transform, respectively. $\odot$ represents element-wise multiplication. $\alpha_{l,i}$ is the mask applied to the Fourier domain to achieve suppression of Fourier low-frequency components, implemented as a function that uses the scaling factor $s_{l}$ for suppression.
 
 ```math
 \alpha_{l,i}(r) = \begin{cases}
@@ -59,11 +59,11 @@ h'(h_{l,i}) = \text{IFFT}(F'(h_{l,i})) \quad
 \end{cases}
 ```
 
-​	Where $r$ represents the radius, and $r_{thresh}$ is the threshold frequency. In the code implementation, the low-frequency components are shifted to the center of the frequency domain, processed through threshold filtering, and then rescaled using $$s_{l}$$ to restore their original shape. After this stage, the features from the backbone network and skip connections, following the linear layer mapping, undergo channel-wise enhancement in the fused features. Subsequently, these features are utilized in the subsequent layers of the U-ViT architecture. It's important to note that the U-ViT structure shown in the figure is for the image generation task, differing slightly from the U-ViT structure that outputs text in a multi-modal diffusion model. However, the FreeV enhancement approach remains unchanged.
+​Where $r$ represents the radius, and $r_{thresh}$ is the threshold frequency. In the code implementation, the low-frequency components are shifted to the center of the frequency domain, processed through threshold filtering, and then rescaled using $s_{l}$ to restore their original shape. After this stage, the features from the backbone network and skip connections, following the linear layer mapping, undergo channel-wise enhancement in the fused features. Subsequently, these features are utilized in the subsequent layers of the U-ViT architecture. It's important to note that the U-ViT structure shown in the figure is for the image generation task, differing slightly from the U-ViT structure that outputs text in a multi-modal diffusion model. However, the FreeV enhancement approach remains unchanged.
 
 ![](D:assets/4.jpg)
 
-​	The actual effect, validates the effectiveness of the FreeV approach proposed in this paper within the U-ViT architecture. The augmentation by modulation factors $b$ and $f$, when applied to the channels, enriches the completeness of the semantic subject. While diminishing their impact on the channels, factor $b$ introduces smoother and blurrier views, whereas factor $f$ brings about more fragmented noise points. The adjustment factor $s$ determines the richness of image details.
+​The actual effect, validates the effectiveness of the FreeV approach proposed in this paper within the U-ViT architecture. The augmentation by modulation factors $b$ and $f$, when applied to the channels, enriches the completeness of the semantic subject. While diminishing their impact on the channels, factor $b$ introduces smoother and blurrier views, whereas factor $f$ brings about more fragmented noise points. The adjustment factor $s$ determines the richness of image details.
 
 
 
