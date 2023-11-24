@@ -2,13 +2,13 @@
 
 
 
-![](assets/有无FreeV.jpg)
+![](assets/1.jpg)
 
 ​	You can apply the FreeV method by replacing the "libs/uvit_multi_post_ln.py" file in UniDiffuser. You can also read the uvit_multi_post_ln.py code directly to easily understand our improved method (our method is as simple as FreeU and involves only a few lines of code to implement).
 
 
 
-![](D:assets/有无FreeV去噪热力图.jpg)
+![](D:assets/2.jpg)
 
 ​	It's evident that the model influenced by the FreeV improvement method exhibits a smoother process and more consistent information changes between adjacent denoising steps during the denoising process. Unlike the conventional models for non-generative tasks, where cosine similarity scores between different layers emphasize better feature extraction, and lower scores between consecutive layers indicate more information gain, in generative diffusion models, a smoother generation process signifies a more unified trend and better performance, especially when the final generated image quality remains consistent. Therefore, lower cosine similarity scores between adjacent denoising steps are considered better in generative diffusion models.
 
@@ -18,7 +18,7 @@
 
 ### Method
 
-![](assets/FreeV框架图.jpg)
+![](assets/3.jpg)
 
 ​	
 
@@ -63,7 +63,7 @@ $$
 $$
 ​	Where $r$ represents the radius, and $r_{thresh}$ is the threshold frequency. In the code implementation, the low-frequency components are shifted to the center of the frequency domain, processed through threshold filtering, and then rescaled using $$s_{l}$$ to restore their original shape. After this stage, the features from the backbone network and skip connections, following the linear layer mapping, undergo channel-wise enhancement in the fused features. Subsequently, these features are utilized in the subsequent layers of the U-ViT architecture. It's important to note that the U-ViT structure shown in the figure is for the image generation task, differing slightly from the U-ViT structure that outputs text in a multi-modal diffusion model. However, the FreeV enhancement approach remains unchanged.
 
-![](D:assets/FreeV调剂因子对比.jpg)
+![](D:assets/4.jpg)
 
 ​	The actual effect, validates the effectiveness of the FreeV approach proposed in this paper within the U-ViT architecture. The augmentation by modulation factors $$b$$ and $$f$$, when applied to the channels, enriches the completeness of the semantic subject. While diminishing their impact on the channels, factor $$b$$ introduces smoother and blurrier views, whereas factor $$f$$ brings about more fragmented noise points. The adjustment factor $$s$$ determines the richness of image details.
 
