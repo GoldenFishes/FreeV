@@ -3,7 +3,8 @@
 
 ![](assets/1.jpg)
 
-​You can apply the FreeV method by replacing the "libs/uvit_multi_post_ln.py" file in UniDiffuser. You can also read the uvit_multi_post_ln.py code directly to easily understand our improved method (our method is as simple as FreeU and involves only a few lines of code to implement).
+**​You can apply the FreeV method by replacing the "libs/uvit_multi_post_ln.py" file in UniDiffuser. You can also read the uvit_multi_post_ln.py code directly to easily understand our improved method (our method is as simple as FreeU and involves only a few lines of code to implement).**
+
 ![](assets/2.jpg)
 
 ​It's evident that the model influenced by the FreeV improvement method exhibits a smoother process and more consistent information changes between adjacent denoising steps during the denoising process. Unlike the conventional models for non-generative tasks, where cosine similarity scores between different layers emphasize better feature extraction, and lower scores between consecutive layers indicate more information gain, in generative diffusion models, a smoother generation process signifies a more unified trend and better performance, especially when the final generated image quality remains consistent. Therefore, lower cosine similarity scores between adjacent denoising steps are considered better in generative diffusion models.
