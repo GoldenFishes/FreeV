@@ -1,5 +1,7 @@
 # FreeV：Zero-cost improvement in Diffusion U-ViT
 
+you can download our paper in https://www.techrxiv.org/articles/preprint/FreeV_Free_Lunch_in_MultiModal_Diffusion_U-ViT/24633840
+
 **​You can apply the FreeV method by replacing the "libs/uvit_multi_post_ln.py" file in UniDiffuser. You can also read the uvit_multi_post_ln.py code directly to easily understand our improved method (our method is as simple as FreeU and involves only a few lines of code to implement).**
 
 ### Code
