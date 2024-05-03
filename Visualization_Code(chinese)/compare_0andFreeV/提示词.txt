@@ -1,0 +1,42 @@
+生图命令：
+python sample_multi_v0.py --mode=t2i --prompt=""
+
+
+free_b=0.95, free_s=0.5, free_f=1.05
+
+
+
+
+1. "一座未来的城市景观，充满高科技的摩天大楼和飞行汽车" 
+   "A futuristic cityscape filled with high-tech skyscrapers and flying cars"
+2. "一个夜晚的森林，闪烁的萤火虫和银河系在天空中"
+   "A nighttime forest with twinkling fireflies and the Milky Way in the sky"
+3. "一个古老的奇幻城堡，被茂密的森林和一座巨大的瀑布环绕"
+   "An ancient fantasy castle surrounded by dense forests and a massive waterfall"
+4. "一个科幻世界的外星生物部落，具有奇异的生物和建筑物"
+   "A sci-fi world with an alien tribal community featuring exotic creatures and structures"
+5. "一场古代的战争，壮观的战场和各种军队的对决"
+   "An ancient war scene with a spectacular battlefield and clashes of various armies"
+6. "一个未来的太空站，太阳系中的行星和宇宙飞船"
+   "A future space station with planets from the solar system and spacecraft"
+7. "一座迷失在时间中的古老迷宫，充满谜题和神秘通道"
+   "A lost ancient labyrinth in time, filled with puzzles and mysterious passageways"
+8. "一个废弃的未来城市，满是废墟和荒废的机器人"
+   "An abandoned future city, full of ruins and derelict robots"
+9. "一个童话故事的场景，有巫师、精灵和神奇的生物"
+   "A fairy tale setting with wizards, elves, and magical creatures"
+10. "一个繁忙的未来都市街道，飞行汽车、悬浮广告牌和人工智能助手"
+    "A bustling futuristic urban street with flying cars, floating billboards, and AI assistants"
+11. "Living room with ocean views"
+12. "Tightly after sunset hacienda snows in forest"
+13. "Best Birthday Party Ideas"
+14. "Sunset scene in the mountains"
+15. "Sunset mountains in Slovenia"
+16. "Marta Raja mountain, sunrise in Mokal, Slovenia"
+17. "Dolomites with sun in sunset"
+18. "Grand Dolomites Sunset Marbella Italy Italy Land Photography HDR"
+19. ""
+20. ""
+21. ""
+22. ""
+

@@ -1,0 +1,1 @@
+free_b=0.95, free_s=0.5, free_f=1.05

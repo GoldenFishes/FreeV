@@ -1,0 +1,21 @@
+python sample_multi_v0.py --mode=i2t --img=assets/1.png
+python sample_multi_v0.py --mode=t2i --prompt=""
+
+【计算NMI/SSIM】
+无方法：
+【0.0442/0.5063126】1. Maine Lynx
+【0.1104/0.680951】2. Dimmel Castle
+【0.0439/0.48711804】3. Romantic Sea Painting Hand Painted Stamp Set Of 2 Decorative Gift Cards Handmade Handpainted Stamp
+【0.0881/0.6336879】4. Chives and Pink Flowers
+【0.1242/0.5761307】5. Winter panoramic view of Mt Etna in a snowy sunset in Banff, Alberta
+【0.0484/0.49015534】6. sydney london neon at night
+
+
+FreeV（0.95b，0.5s，1.05f）：
+【0.0460/0.5683622】1. Maine Lynx
+【0.0953/0.65051603】2. Diomys Castle
+【0.0577/0.44231984】3. Romantic Sea Seascape Hand Painted Stamp Set Of 2 Set Wedding Card Handmade Handpainted Stamp
+【0.0788/0.59107864】4. Chives with water drops
+【0.0764/0.572428】5. Winter Panoramic Lake Orchards (in a snowy sunset in Banff, ON
+【0.0547/0.5556158】6. sydney london neon at night
+

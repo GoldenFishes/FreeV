@@ -1,0 +1,37 @@
+1. Black and white street photography of a rainy night in New York, reflections on wet pavement.
+2. High-fashion photography in an abandoned industrial warehouse, with dramatic lighting and edgy outfits.
+3. Macro photography of dewdrops on a spiderweb, with morning sunlight creating rainbows.
+4. Aerial photography of a winding river through autumn forests, with vibrant red and orange foliage.
+5. Urban portrait of a skateboarder in mid-jump, graffiti walls background, high shutter speed.
+6. Underwater photography of a coral reef, with diverse marine life and a scuba diver for scale.
+7. Vintage-style travel photography of a train station in Europe, with passengers and old luggage.
+8. Long-exposure night photography of a starry sky over a mountain range, with light trails.
+9. Documentary-style photography of a bustling marketplace in Marrakech, with spices and textiles.
+10. Food photography of a gourmet meal, with a shallow depth of field, elegant plating, and soft lighting.
+
+无：
+[0.5877055525779724]1. rainy night bw street
+[0.6729035973548889]2. romantic neon Houston engagement session in industrial warehouse Dallas fashion warehouses - Austin
+[0.6006567478179932]3. Spider and Dew Web
+[0.835347056388855]4. Vivid colorful aerial shot of Neuse Falls autumn leaves in autumn.
+[0.6191895008087158]5. Street Dancer Photography Melbourne
+[0.647707462310791]6. Snorkelling Snorkeling
+[0.674242377281189]7. Passengers, Monochrome Grand Central, Station, London, 1949
+[0.5146031975746155]8. Milky Way over Grand Centre
+[0.8116224408149719]9. The colourful souks in Marrakech.
+[0.7717097401618958]10. Romantic liqueur canaitiments and appetizers for two dinner photography by Photography London for food photographer.
+
+
+
+
+FreeV（0.95b，0.5s，1.05f）：
+[0.48904454708099365]1. Rainy Night BW
+[0.6652657985687256]2. Alice Luminous Neon Engagement Shoot Vintage Industrial Styled Bridal Styled Wedding Warehouse Muncie
+[0.5486065149307251]3. Spider Sphing Web Web
+[0.7343637347221375]4. Ray Jimenez Whales photographer showing a colorful autumn in Muskoka, Ontario.
+[0.7591691613197327]5. Young man jumping wall with graffiti in Berlin
+[0.6116262078285217]6. Scuba Cozumel
+[0.6958279609680176]7. Black and white print photo: Stadion, London, 1960
+[0.632683515548706]8. Milky Way over Painted Hills
+[0.5962916016578674]9. traditional textiles souk
+[0.7321968674659729]10. Braised chorizo meatballs with olive, thyme marinara and crab salsa photographed by Amanda Shields, food photographer.

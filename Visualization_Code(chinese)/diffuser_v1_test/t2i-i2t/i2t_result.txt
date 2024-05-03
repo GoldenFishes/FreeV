@@ -1,0 +1,24 @@
+无方法：
+1. A black and white photo of a wet street at night/ 0.8790016174316406
+2. A woman in heels walking down a runway in a warehouse/ 0.7592421770095825
+3. a close up of a spider web with green lines/ 0.7907376289367676
+4. An aerial view of a colorful river in the fall/ 0.8093007206916809
+5. Young Punk Cat Jumping On A Skate Skateboarding On Graffiti Beach Wall City On Graffiti/ 0.807418167591095
+6. A scuba diver swims the coral reef of Maldives/ 0.7713265419006348
+7. An old black and white photo of a train station/ 0.8427232503890991
+8. Milky Way in the night sky above a snow covered lake/ 0.7408506870269775
+9. The colorful shops in the Harmoe of Marrakech, Morocco/ 0.8123872876167297
+10. Four white plates with different types of food on them/ 0.6644853353500366
+
+
+FreeV方法1（0.95b，0.5s，1.05）：
+1. A black and white photo of a wet street at night/ 0.8790016174316406
+2. A woman in a purple skirt stands in a long warehouse/ 0.6994745135307312
+3. A close up of a spider web with green textured/ 0.7703791260719299
+4. An aerial view of a colorful river in the fall/ 0.8093007206916809
+5. Young man dancer doing the moves in front of graffiti mural wall stock image/ 0.7934839129447937
+6. Scuba diving in Cozumel, Mexico/ 0.6117244958877563
+7. People walk through a train station at Westminster station in London, UK./ 0.6682001948356628
+8. Milky Way in the night sky above a frozen frozen lake/ 0.7280747294425964
+9. The colorful marwah in Marrakech, Morocco/ 0.8030620813369751
+10. Four different plates with types of food on them/ 0.6424892544746399
