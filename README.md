@@ -130,3 +130,8 @@ h'(h_{l,i}) = \text{IFFT}(F'(h_{l,i})) \quad
 
 
 
+
+### Discussion
+
+Our paper has reject, you can only download it at TechRxiv.
+Reviews in this repo: ./FreeV_Reviews.md
