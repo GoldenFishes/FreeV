@@ -4,6 +4,9 @@ you can download our paper in https://www.techrxiv.org/articles/preprint/FreeV_F
 
 **​You can apply the FreeV method by replacing the "libs/uvit_multi_post_ln.py" file in UniDiffuser. You can also read the uvit_multi_post_ln.py code directly to easily understand our improved method (our method is as simple as FreeU and involves only a few lines of code to implement).**
 
+## AutoDL Deployment(Recommendation)
+Load the image to create an instance：https://www.codewithgpu.com/i/GoldenFishes/FreeV/FreeV_In_UniDiffuser
+
 ### Code
 
 ```python
